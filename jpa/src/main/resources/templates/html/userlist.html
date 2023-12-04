@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>순번</td>
+            <td>이름</td>
+        </tr>
+        <tr th:each="i : ${userList}">
+            <td th:text="${i.seq}"></td>
+            <td th:text="${i.user}"></td>
+        </tr>
+    </table>
+    <!-- <table>
+        <tr th:each="data : ${#numbers.sequence(1,10)}">
+            <td>1</td>
+        </tr>
+    </table>    -->
+    <table border="1">
+        <tr th:each="number : ${#numbers.sequence(1,3)}">
+            <td th:text="${number}">number</td>
+            <td th:text="${number}">number</td>
+            <td th:text="${number}">number</td>
+        </tr>
+    </table>  
+    <!-- <span th:text="${data[0].seq}"></span>&nbsp;&nbsp;
+    <span th:text="{data[0].user}"></span><br>
+    <span th:text="${data[1].seq}"></span>&nbsp;&nbsp;
+    <span th:text="{data[1].user}"></span><br>
+    <span th:text="${data[2].seq}"></span>&nbsp;&nbsp;
+    <span th:text="{data[2].user}"></span> -->
+</body>
+</html>
